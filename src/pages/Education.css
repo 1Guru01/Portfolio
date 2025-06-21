@@ -1,0 +1,62 @@
+.education {
+    background: var(--primary-bg);
+    padding-top: 4rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.edu-card {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 0.8s forwards;
+}
+
+.edu-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.edu-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.edu-degree {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+}
+
+.edu-institution {
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
+
+.edu-duration,
+.edu-score {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+@keyframes fadeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .edu-card {
+        padding: 1.5rem;
+    }
+}
